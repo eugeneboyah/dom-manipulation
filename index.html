@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Manipulation</title>
+	<style>
+.flex-container {
+  background-color: #f1f1f1;
+  margin: 30px;
+  padding: 50px;
+  border: 15px solid;
+  font-size: 30px;
+}
+
+h1{
+	color: blue;
+	  font-size: 40px;
+
+}
+</style>
+</head>
+<body>
+
+	<div class ="flex-container">
+
+	 <h1> JavaScript Video Summary</h1>
+	 <h3>DOM Manipulation</h3>
+
+	 <ul>
+	 	<li>const body = document.body</li>
+	 	<li>body.append('hello world'):<br><p>we have append and we also ave appendChild. their difference is that you can append strings but you can not print child   </p></li>
+	 	<li>div.textContant</li>
+	 	<li>const spenHi = document.queryselector(#Hi)</li>
+	 	<li>cont sepenBye = document.queryselector(#Bye)</li> 
+	 		 	<li> spenHi.remove</li>
+	 		 		 	<li>console.log(spenHi.title)</li>
+
+	 	 </ul>
+
+	 <p>we created element and add it to our page  </p>	
+	 <p> what is the difference between innerText and a TextElement? they look like they do the same thing but they are different a little bit. TextContant will print only the text contant inside the div and inner only display your text just as it is display in your brower     </p>
+
+   </div>
+
+
+
+	<!-- PSETs below -->
+	<script type="text/javascript">
+
+		/* 1. BMI Calculator
+
+			Build a program that calculates a person's Body Mass Index (BMI) based on their height and weight. The program should prompt the user to enter their height (in meters) and weight (in kilograms), and then calculate and display their BMI.
+	()
+	
+		*/ // Prompt the user for height and weight
+var height = parseFloat(prompt("Enter your height in meters:"));
+var weight = parseFloat(prompt("Enter your weight in kilograms:"));
+
+// Calculate BMI
+var bmi = weight / (height * height);
+
+// Display the BMI
+console.log("Your BMI is: " + bmi.toFixed(2));
+
+		/* 2. Driving License Eligibility
+
+			Create a program that checks if a person is eligible for a driver's license based on their age. The program should prompt the user to enter their age, and then display a message indicating whether they are eligible for a driver's license or not.
+		*/ /// Prompt the user for their age
+var age = parseInt(prompt("Enter your age:"));
+
+// Check eligibility for driver's license
+if (age >= 18) {
+    console.log("You are eligible for a driver's license.");
+} else {
+    console.log("You are not eligible for a driver's license.");
+}
+
+
+
+
+		/* 3. 5. Age Group Classifier
+
+			Write a program that classifies a person into different age groups based on their age. The program should prompt the user to enter their age and then display a message indicating which age group they belong to (e.g., child, teenager, adult, senior). Use a Switch statement
+
+		*/ // Prompt the user for their age
+var age = parseInt(prompt("Enter your age:"));
+
+// Define age groups using a switch statement
+var ageGroup;
+
+switch (true) {
+    case age >= 0 && age <= 12:
+        ageGroup = "child";
+        break;
+    case age >= 13 && age <= 19:
+        ageGroup = "teenager";
+        break;
+    case age >= 20 && age <= 64:
+        ageGroup = "adult";
+        break;
+    case age >= 65:
+        ageGroup = "senior";
+        break;
+    default:
+        ageGroup = "unknown";
+}
+
+// Display the age group
+console.log("You belong to the age group: " + ageGroup);
+
+
+
+
+		/* 4. Multiply
+
+			Create a function called 'multiply' that takes two parameters and returns their product.
+
+		*/ function multiply(a, b) {
+    return a * b;
+}
+
+// Example usage
+var result = multiply(5, 7);
+console.log("The product is: " + result); // Output: The product is: 35
+
+
+
+
+		/* 5. Divide
+
+			Create a function called 'divide' that takes two parameters and returns their quotient.
+
+		*/ function divide(a, b) {
+    if (b !== 0) {
+        return a / b;
+    } else {
+        throw new Error("Division by zero is not allowed.");
+    }
+}
+
+// Example usage
+try {
+    var result = divide(10, 2);
+    console.log("The quotient is: " + result); // Output: The quotient is: 5
+
+    var divisionByZeroResult = divide(8, 0); // This will throw an error
+} catch (error) {
+    console.error(error.message); // Output: Division by zero is not allowed.
+
+
+
+
+		/* 6. Subtract
+
+			Create a function called 'subtract' that takes two parameters and returns their difference.
+
+		*/ function subtract(a, b) {
+    return a - b;
+}
+
+// Example usage
+var result = subtract(10, 3);
+console.log("The difference is: " + result); // Output: The difference is: 5
+
+
+
+
+		/* 7. isEven
+
+			Create a function called 'isEven' that takes a number as a parameter and returns true if it's even, otherwise false.
+
+		*/ function isEven(number) {
+    return number % 2 === 0;
+}
+
+// Example usage
+console.log(isEven(4)); // Output: true
+console.log(isEven(7)); // Output: false
+
+		
+
+		/* 8. Temperature
+
+			Write an if-else statement that checks if a variable 'temperature' is greater than 30 and prints "It's hot" if true, otherwise, print "It's not so hot".
+
+		*/ var temperature = 32; // You can change this value to test different temperatures
+
+if (temperature > 30) {
+    console.log("It's hot");
+} else {
+    console.log("It's not so hot");
+}
+
+
+		
+	</script>
+</body>
+</html>
