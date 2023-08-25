@@ -73,23 +73,23 @@ h1{
 			Build a program that calculates a person's Body Mass Index (BMI) based on their height and weight. The program should prompt the user to enter their height (in meters) and weight (in kilograms), and then calculate and display their BMI.
 	()
 	
-		*/ // Prompt the user for height and weight
-var height = parseFloat(prompt("Enter your height in meters:"));
-var weight = parseFloat(prompt("Enter your weight in kilograms:"));
+		*/ 
+var height = prompt("Enter your height in meters:");
+var weight = prompt("Enter your weight in kilograms:");
 
-// Calculate BMI
+
 var bmi = weight / (height * height);
 
-// Display the BMI
-console.log("Your BMI is: " + bmi.toFixed(2));
+
+console.log("BMI: " + bmi.Fixed(2));
 
 		/* 2. Driving License Eligibility
 
 			Create a program that checks if a person is eligible for a driver's license based on their age. The program should prompt the user to enter their age, and then display a message indicating whether they are eligible for a driver's license or not.
-		*/ /// Prompt the user for their age
-var age = parseInt(prompt("Enter your age:"));
+		*/ 
+var age = prompt("Enter your age:");
 
-// Check eligibility for driver's license
+
 if (age >= 18) {
     console.log("You are eligible for a driver's license.");
 } else {
@@ -103,10 +103,9 @@ if (age >= 18) {
 
 			Write a program that classifies a person into different age groups based on their age. The program should prompt the user to enter their age and then display a message indicating which age group they belong to (e.g., child, teenager, adult, senior). Use a Switch statement
 
-		*/ // Prompt the user for their age
-var age = parseInt(prompt("Enter your age:"));
+		*/ 
+var age = prompt("Enter your age:");
 
-// Define age groups using a switch statement
 var ageGroup;
 
 switch (true) {
@@ -123,10 +122,9 @@ switch (true) {
         ageGroup = "senior";
         break;
     default:
-        ageGroup = "unknown";
+        ageGroup = "error";
 }
 
-// Display the age group
 console.log("You belong to the age group: " + ageGroup);
 
 
@@ -140,9 +138,8 @@ console.log("You belong to the age group: " + ageGroup);
     return a * b;
 }
 
-// Example usage
 var result = multiply(5, 7);
-console.log("The product is: " + result); // Output: The product is: 35
+console.log("The product is: " + result); 
 
 
 
@@ -155,18 +152,18 @@ console.log("The product is: " + result); // Output: The product is: 35
     if (b !== 0) {
         return a / b;
     } else {
-        throw new Error("Division by zero is not allowed.");
+        throw LLError("Division by zero is not allowed.");
     }
 }
 
-// Example usage
-try {
-    var result = divide(10, 2);
-    console.log("The quotient is: " + result); // Output: The quotient is: 5
 
-    var divisionByZeroResult = divide(8, 0); // This will throw an error
-} catch (error) {
-    console.error(error.message); // Output: Division by zero is not allowed.
+try {
+    var result = divide(8, 2);
+    console.log("The quotient is: " + result); 
+
+    var divisionByZeroResult = divide(8, 0); 
+}  {
+    console.error(error.message); }
 
 
 
@@ -179,9 +176,9 @@ try {
     return a - b;
 }
 
-// Example usage
-var result = subtract(10, 3);
-console.log("The difference is: " + result); // Output: The difference is: 5
+
+var result = subtract(7, 3);
+console.log("The difference is: " + result);
 
 
 
@@ -194,9 +191,9 @@ console.log("The difference is: " + result); // Output: The difference is: 5
     return number % 2 === 0;
 }
 
-// Example usage
-console.log(isEven(4)); // Output: true
-console.log(isEven(7)); // Output: false
+
+console.log(isEven(2)); 
+console.log(isEven(5)); 
 
 		
 
@@ -204,7 +201,7 @@ console.log(isEven(7)); // Output: false
 
 			Write an if-else statement that checks if a variable 'temperature' is greater than 30 and prints "It's hot" if true, otherwise, print "It's not so hot".
 
-		*/ var temperature = 32; // You can change this value to test different temperatures
+		*/ var temperature = 32; 
 
 if (temperature > 30) {
     console.log("It's hot");
